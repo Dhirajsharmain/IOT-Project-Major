@@ -16,8 +16,8 @@
 </ul>
 <p>Before going into Project, we will discuss about GPS, GSM and Heartbeat Sensor.</p>
 <p><strong><u>GPS Module and Its Working:</u></strong></p>
-<p><a href="http://circuitdigest.com/article/what-is-gps">GPS stands for Global Positioning System</a>&nbsp;and used to detect the Latitude and Longitude of any location on the <strong>Earth</strong>, with exact UTC time (Universal Time Coordinated). GPS module is used to track the location of accident in our project. This device receives the coordinates from the satellite for each and every second, with time and date. We have previously extracted&nbsp;<strong>$GPGGA</strong>&nbsp;string in&nbsp;<a href="http://circuitdigest.com/microcontroller-projects/vehicle-tracking-system-using-arduino-gps-and-gsm">Vehicle Tracking System</a>&nbsp;to find the Latitude and Longitude Coordinates.</p>
-<p><strong>GPS module</strong>&nbsp;sends the data related to tracking position in real time, and it sends so many data in NMEA format (see the screenshot below). NMEA format consist several sentences, in which we only need one sentence. This sentence starts from&nbsp;<strong>$GPGGA</strong>&nbsp;and contains the coordinates, time and other useful information. This&nbsp;<strong>GPGGA</strong>&nbsp;is referred to&nbsp;<strong>Global Positioning System Fix Data</strong>.&nbsp;Know more about&nbsp;<a href="http://circuitdigest.com/microcontroller-projects/reading-gps-data-using-computer-and-arduino">NMEA sentences and reading GPS data here.</a></p>
+<p>GPS stands for Global Positioning System&nbsp;and used to detect the Latitude and Longitude of any location on the <strong>Earth</strong>, with exact UTC time (Universal Time Coordinated). GPS module is used to track the location of accident in our project. This device receives the coordinates from the satellite for each and every second, with time and date. We have previously extracted&nbsp;<strong>$GPGGA</strong>&nbsp;string in&nbsp;Vehicle Tracking System&nbsp;to find the Latitude and Longitude Coordinates.</p>
+<p><strong>GPS module</strong>&nbsp;sends the data related to tracking position in real time, and it sends so many data in NMEA format (see the screenshot below). NMEA format consist several sentences, in which we only need one sentence. This sentence starts from&nbsp;<strong>$GPGGA</strong>&nbsp;and contains the coordinates, time and other useful information. This&nbsp;<strong>GPGGA</strong>&nbsp;is referred to&nbsp;<strong>Global Positioning System Fix Data</strong>.&nbsp;Know more about&nbsp;NMEA sentences and reading GPS data here.</p>
 <p>We can extract coordinate from $GPGGA string by counting the commas in the string. Suppose you find $GPGGA string and stores it in an array, then Latitude can be found after two commas and Longitude can be found after four commas. Now, this latitude and longitude can be put in other arrays.</p>
 <p><strong>Serial Monitor Reading</strong></p>
 <p>Below is the&nbsp;<strong>$GPGGA</strong>&nbsp;String, along with its description:</p>
@@ -148,7 +148,7 @@
 <li>GPRS Enabled</li>
 </ul>
 <p><strong>AT Command:</strong></p>
-<p>AT&nbsp; means ATTENTION. This command is used to control GSM module. There are some commands for calling and messaging that we have used in many of our previous&nbsp;<a href="https://circuitdigest.com/search/node/gsm%20and%20arduino">GSM projects with Arduino</a>. For testing GSM Module we used AT command. After receiving AT Command GSM Module respond with OK. It means GSM module is working fine. Below is&nbsp;<strong>some AT commands</strong>&nbsp;we used here in this project :</p>
+<p>AT&nbsp; means ATTENTION. This command is used to control GSM module. There are some commands for calling and messaging that we have used in many of our previous&nbsp;GSM projects with Arduino. For testing GSM Module we used AT command. After receiving AT Command GSM Module respond with OK. It means GSM module is working fine. Below is&nbsp;<strong>some AT commands</strong>&nbsp;we used here in this project :</p>
 <p>ATE0 For echo off</p>
 <p>AT+CNMI=2,2,0,0,0&nbsp; &lt;ENTER&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Auto opened message Receiving.&nbsp; (No need to open message)</p>
 <p>ATD&lt;Mobile Number&gt;; &lt;ENTER&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; making a call (ATD+919610126059;\r\n)</p>
@@ -158,7 +158,7 @@
 <p>&gt;&gt;After writing message</p>
 <p>Ctrl+Z&nbsp; send message command (26 in decimal).</p>
 <p>ENTER=0x0d in HEX</p>
-<p>(To learn more about GSM module, Check our various&nbsp;<a href="https://circuitdigest.com/tags/gsm">GSM projects with various microcontrollers here</a>).</p>
+<p>(To learn more about GSM module, Check our various&nbsp;GSM projects with various microcontrollers here.</p>
 <p><strong><u>Heartbeat Sensor</u></strong><strong>:</strong></p>
 <p>The principle behind the working of the Heartbeat Sensor is Photoplethysmograph. According to this principle, the changes in the volume of blood in an organ are measured by the changes in the intensity of the light passing through that organ.</p>
 <p>Usually, the source of light in a heartbeat sensor would be an IR LED and the detector would be any Photo Detector like a Photo Diode, an LDR (Light Dependent Resistor) or a Photo Transistor.</p>
@@ -229,4 +229,4 @@
 <p>&nbsp; delay(2000);</p>
 <p>&nbsp; lcd.clear();</p>
 <p>&nbsp; .... ......</p>
-<p>Here we have also created some other function for various puposes like&nbsp;<strong><em>void gpsEvent()</em></strong>&nbsp;to get GPS coordinates,&nbsp;<strong><em>void coordinate2dec()</em></strong>&nbsp;for extracting coordinates from the GPS string and&nbsp;<a href="https://circuitdigest.com/microcontroller-projects/arduino-vehicle-tracker-on-google-maps-using-esp8266">convert them into Decimal values</a>,&nbsp;<strong><em>void show_coordinate()</em></strong>&nbsp;for displaying values over serial monitor and LCD, and finally the&nbsp;<strong><em>void Send()</em></strong>&nbsp;for sending alert SMS to the predefined number.</p>
+<p>Here we have also created some other function for various puposes like&nbsp;<strong><em>void gpsEvent()</em></strong>&nbsp;to get GPS coordinates,&nbsp;<strong><em>void coordinate2dec()</em></strong>&nbsp;for extracting coordinates from the GPS string and&nbsp;convert them into Decimal values,&nbsp;<strong><em>void show_coordinate()</em></strong>&nbsp;for displaying values over serial monitor and LCD, and finally the&nbsp;<strong><em>void Send()</em></strong>&nbsp;for sending alert SMS to the predefined number.</p>
